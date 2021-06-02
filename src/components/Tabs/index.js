@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./index.less"
 /**
  * 底部 Tab 组件
  */
