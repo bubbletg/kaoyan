@@ -1,12 +1,29 @@
-.footer_tab{
-  display: flex;
+.footer_tab {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 50px;
-  background-color: pink;
-  &.footer_tab_item{
-    background-color: red;
+  box-shadow: 0px -1px 0px 0px #EEEEEE;
+  & > ul {
+    display: flex;
+    height: 50px;
+    flex-wrap: nowrap;
+    & .footer_tab_item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+      color: #999999;
+      > img {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 5px;
+      }
+    }
+    & .footer_tab_item-active{
+      color: #FF8E55;
+    }
   }
 }
