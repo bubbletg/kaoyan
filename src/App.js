@@ -1,14 +1,16 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { router } from './router';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import { tab_router, router } from './router';
 import './assets/css/index.css';
 import Tabs from './components/Tabs';
 
 function App() {
+  let { pathname } = useLocation();
+  let routerList = router.concat(tab_router);
   return (
     <div>
       <Switch>
-        {router.map((item, index) => {
+        {routerList.map((item, index) => {
           return (
             <Route
               key={index}
@@ -21,7 +23,7 @@ function App() {
           );
         })}
       </Switch>
-      <Tabs></Tabs>
+      {tab_router.some(i => i.path === pathname) ? <Tabs></Tabs> : ''}
     </div>
   );
 }

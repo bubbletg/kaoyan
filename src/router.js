@@ -4,8 +4,6 @@ import Course from './views/course';
 import News from './views/news';
 import Mine from './views/mine';
 
-const tabs = ['home', 'course', 'news', 'mine'];
-
 const router = [
   {
     path: '/',
@@ -13,7 +11,10 @@ const router = [
     render(props) {
       return <Activate></Activate>;
     }
-  },
+  }
+];
+
+const tab_router = [
   {
     path: '/home',
     exact: true,
@@ -44,4 +45,4 @@ const router = [
   }
 ];
 
-export { tabs, router };
+export { router, tab_router };
