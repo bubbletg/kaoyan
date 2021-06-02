@@ -1,7 +1,6 @@
 import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { tab_router, router } from './router';
-import './assets/css/index.css';
 import Tabs from './components/Tabs';
 
 function App() {
