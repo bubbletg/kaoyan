@@ -1,22 +1,28 @@
-
-import './assets/css/App.css';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import { router } from './router';
+import './assets/css/index.css';
+import Tabs from './components/Tabs';
 
 function App() {
+  console.log(router);
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        {router.map((item, index) => {
+          return (
+            <Route
+              key={index}
+              path={item.path}
+              exact={item.exact}
+              render={props => {
+                return item.render(props);
+              }}
+            ></Route>
+          );
+        })}
+      </Switch>
+      <Tabs></Tabs>
     </div>
   );
 }
