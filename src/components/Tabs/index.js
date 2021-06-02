@@ -1,11 +1,12 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import './index.less';
 /**
  * 底部 Tab 组件
  */
-export default function Tabs(props) {
+export default function Tabs() {
   let history = useHistory();
+  let { pathname } = useLocation();
   let tab_icons = [
     {
       id: 0,
@@ -49,15 +50,13 @@ export default function Tabs(props) {
                 history.push(icon.to);
               }}
             >
-              {props.pathname !== icon.to ? (
+              {pathname !== icon.to ? (
                 <img src={icon.img} alt={icon.title} />
               ) : (
                 <img src={icon.imgfocus} alt={icon.title} />
               )}
               <span
-                className={
-                  props.pathname === icon.to ? 'footer_tab_item-active' : ''
-                }
+                className={pathname === icon.to ? 'footer_tab_item-active' : ''}
               >
                 {icon.title}
               </span>

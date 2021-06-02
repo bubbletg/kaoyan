@@ -1,11 +1,10 @@
 import React from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { router } from './router';
 import './assets/css/index.css';
 import Tabs from './components/Tabs';
 
 function App() {
-  let { pathname } = useLocation();
   return (
     <div>
       <Switch>
@@ -22,7 +21,7 @@ function App() {
           );
         })}
       </Switch>
-      <Tabs pathname={pathname}></Tabs>
+      <Tabs></Tabs>
     </div>
   );
 }
