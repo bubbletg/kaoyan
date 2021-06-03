@@ -1,0 +1,58 @@
+@import '../../style/variables.less';
+.home {
+  //首页顶部
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    background: #ffffff;
+    > .fl {
+      display: flex;
+      align-items: center;
+    }
+    & .header_text {
+      display: inline-block;
+      font-family: @themeFontFamily;
+      color: @themeColors-black;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25px;
+    }
+    & .header_text-one {
+      margin-right: 3px;
+    }
+    & .header_text-last {
+      margin-left: 3px;
+    }
+    & .header_time {
+      display: inline-block;
+      margin: 1px;
+      width: 16px;
+      height: 20px;
+      border-radius: 2px;
+      text-align: center;
+      line-height: 20px;
+      color: #ffffff;
+      font-family: DINAlternate-Bold, DINAlternate;
+      font-weight: bold;
+      background-color: @themeColors;
+    }
+    & .enter_icon{
+      width: 20px;
+      height: 20px;
+    }
+    & .signIn {
+      width: 64px;
+      height: 26px;
+      background: @themeColors;
+      border-radius: 13px;
+      text-align: center;
+      color: #ffffff;
+      line-height: 26px;
+      font-size: 12px;
+      font-family: @themeFontFamily;
+      font-weight: 500;
+    }
+  }
+}
