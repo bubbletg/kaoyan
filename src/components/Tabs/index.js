@@ -39,7 +39,7 @@ export default function Tabs() {
     }
   ];
   return (
-    <div className="footer_tab">
+    <footer className="footer_tab">
       <ul>
         {tab_icons.map(icon => {
           return (
@@ -64,6 +64,6 @@ export default function Tabs() {
           );
         })}
       </ul>
-    </div>
+    </footer>
   );
 }

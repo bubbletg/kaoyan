@@ -6,11 +6,13 @@ import './index.less';
  * 启动页
  */
 export default function Activate() {
+  // 启动页显示时间
+  let activateTime = 1000;
   let History = useHistory();
   // 跳转至首页
   setTimeout(() => {
     History.push('/home');
-  }, 3000);
+  }, activateTime);
   return (
     <div className="activate">
       <img
